@@ -1,39 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <script>
-      // Blazor-Routing Fix für GitHub Pages
-      const path = window.location.pathname.replace('/Event/', '/show/Event/');
-      location.replace(path || "/show/");
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; url=/show/" />
+    <script>
+      // Leitet dynamisch an die richtige URL weiter (damit Blazor die Route interpretieren kann)
+      const newPath = '/show' + location.pathname + location.search + location.hash;
+      window.location.replace(newPath);
     </script>
-    <title>Prototype</title>
-    <base href="/" />
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/app.css" />
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <link href="Prototype.styles.css" rel="stylesheet" />
-    <base href="/show/" />
-
-</head>
-
-<body>
-    <div id="app">
-        <svg class="loading-progress">
-            <circle r="40%" cx="50%" cy="50%" />
-            <circle r="40%" cx="50%" cy="50%" />
-        </svg>
-        <div class="loading-progress-text"></div>
-    </div>
-
-    <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
-    </div>
-    <script src="_framework/blazor.webassembly.js"></script>
-</body>
-
+  </head>
+  <body>
+    <p>Seite nicht gefunden. Weiterleitung zur App... <a href="/show/">Klick hier</a></p>
+  </body>
 </html>
