@@ -5,10 +5,10 @@
     <title>Redirecting...</title>
     <meta http-equiv="refresh" content="0; url=/show/" />
     <script>
-      // Leitet dynamisch an die richtige URL weiter (damit Blazor die Route interpretieren kann)
-      const newPath = '/show' + location.pathname + location.search + location.hash;
-      window.location.replace(newPath);
+      const path = window.location.pathname.replace(/^\/[^\/]+\//, "/show/");
+      location.replace(path);
     </script>
+
   </head>
   <body>
     <p>Seite nicht gefunden. Weiterleitung zur App... <a href="/show/">Klick hier</a></p>
