@@ -4,6 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <script>
+      // Blazor-Routing Fix für GitHub Pages
+      const path = window.location.pathname.replace('/Event/', '/show/Event/');
+      location.replace(path || "/show/");
+    </script>
     <title>Prototype</title>
     <base href="/" />
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
